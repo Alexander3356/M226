@@ -14,5 +14,7 @@ public class Formato {
 		System.out.println(String.format("%.6f", numero));
 		System.out.println(String.format("%.2f", numero));
 		System.out.println(String.format("%.0f", numero));
+		System.out.println(String.format("%,.2f", numero));
+		System.out.println(String.format("%.2e", numero));
 	}
 }
