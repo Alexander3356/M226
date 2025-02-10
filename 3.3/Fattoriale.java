@@ -3,7 +3,7 @@
 *Esercizio 3.3
 *
 * @author Alexander Mascaro
-* @version 10.02.2025
+* @version 10.02.2025 
 */
 
 public class Fattoriale {

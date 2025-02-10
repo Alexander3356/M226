@@ -2,7 +2,7 @@
 /**
 *Esercizio 4.6
 *
-* @author Alexander Mascaro
+* @author Alexander Mascaro 
 * @version 10.02.2025
 */
 import java.util.Random;

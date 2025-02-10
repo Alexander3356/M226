@@ -3,7 +3,7 @@
 *Esercizio 3.2
 *
 * @author Alexander Mascaro
-* @version 10.02.2025
+* @version 10.02.2025 
 */
 
 public class Progressione {

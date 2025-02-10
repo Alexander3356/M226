@@ -3,7 +3,7 @@
 *Esercizio 2.12
 *
 * @author Alexander Mascaro
-* @version 03.02.2025
+* @version 03.02.2025 
 */
 
 public class Formato {
