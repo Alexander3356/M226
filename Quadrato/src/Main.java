@@ -11,10 +11,13 @@ public class Main {
 
     Square q1 = new Square();
     Square q2 = new Square(4);
+    Square q3 = new Square(0);
     System.out.println(q1.toString());
     q1.draw();
     System.out.println(q2.toString());
     q2.draw();
+    System.out.println(q3.toString());
+    q3.draw();
 
 
     }

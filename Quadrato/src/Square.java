@@ -43,9 +43,13 @@ public class Square {
 
     @Override
     public String toString() {
-        return "Area = " + getArea()
-                + "\nPerimetro = " + getPerimeter()
-                + "\n" + getDimension();
+        if (lato > 0) {
+            return "\nArea = " + getArea()
+                    + "\nPerimetro = " + getPerimeter()
+                    + "\n" + getDimension();
+        } else {
+            return "\nInserire un lato maggiore di 0";
+        }
     }
 
     public int getLato() {
