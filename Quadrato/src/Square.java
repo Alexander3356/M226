@@ -7,7 +7,7 @@ public class Square {
     }
     public Square() {
         this.lato = 5;
-    }
+    }s
 
     public int getArea() {
         return lato * lato;

@@ -1,0 +1,25 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Star {
+ -Name: string
+ -Luminosity: long
+ -Mass: long
+ -Volume: long
+ -Age: long
+ +Star(Name : string, Luminosity : long, Mass : long, Volume : long, Age : long)
+ +Star()
+ +getName():string
+ +setName(string)
+ +getLuminosity():long
+ +setLuminosity(long)
+ +getMass():long
+ +setMass(long)
+ +getVolume():long
+ +setVolume(long)
+ +getAge():long
+ +setAge(long)
+ +toString():string
+}
+
+
+@enduml

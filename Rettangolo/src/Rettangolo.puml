@@ -1,0 +1,18 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+class Rettangolo {
+ -minore: int
+ -maggiore: int
+ +Rettangolo(minore : int, maggiore : int)
+ +getArea(): int
+ +getPerimetro(): int
+ +getDiagonale(): int
+ +toString(): string
+ +getMinore: int
+ +setMinore: void
+ +getMaggiore: int
+ +setMaggiore: void
+}
+
+@enduml
