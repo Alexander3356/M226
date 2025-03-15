@@ -43,7 +43,7 @@ public class Star {
 
     public void setMass(long mass) {
         this.mass = mass;
-    }
+    }s
 
     public double getVolume() {
         return volume;

@@ -1,0 +1,35 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Planet {
+  -Name: string
+  -Mass: double
+  -Volume: double
+  -Density: double
+  -Radius: double
+  -Life: bool
+  -Population: double
+  -GasGiant: bool
+  -Albedo: double
+  +Planet(Name : string, Mass : double, Volume : double, Density : double, Radius : double, Life : bool, Population : double, GasGiant : bool, Albedo : double)
+  +calcoloAccelerazione(): double
+  +getName(): string
+  +setName(string)
+  +getMass(): double
+  +setMass(double)
+  +getVolume(): double
+  +setVolume(double)
+  +getDensity(): double
+  +setDensity(double)
+  +getRadius(): double
+  +setRadius(double)
+  +getLife(): bool
+  +setLife(bool)
+  +getPopulation(): double
+  +setPopulation(double)
+  +getGasGiant(): bool
+  +setGasGiant(bool)
+  +getAlbedo(): double
+  +setAlbedo(double)
+  +toString(): string
+}
+@enduml
