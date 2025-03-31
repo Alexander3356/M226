@@ -1,0 +1,51 @@
+@startuml
+Class Auto{
+-nome: String
+-cognome: String
+-veicolo: Veicolo
+-sede: Sede
++Auto(String nome, String cognome, Veicolo veicolo, Sede sede)
++getNome(): String
++getCognome(): String
++getVeicolo(): Veicolo
++getSede(): Sede
++setNome(String nome): void
++setCognome(String cognome): void
++setVeicolo(Veicolo veicolo): void
++setSede(Sede sede): void
++toString(): String
+}
+
+Class Veicolo{
+-modello: String
+-marca: String
+-targa: String
++Veicolo(String modello, String marca, String targa)
++getModello(): String
++getMarca(): String
++getTarga(): String
++setModello(String modello): void
++setMarca(String marca): void
++setTarga(String targa): void
++toString(): String
+}
+
+Class Sede{
+-NPA: int
+-indirizzo: String
+-telefono: String
++Sede(int NPA, String indirizzo, String telefono)
++getNPA(): int
++getIndirizzo(): String
++getTelefono(): String
++setNPA(int NPA): void
++setIndirizzo(String indirizzo): void
++setTelefono(String telefono): void
++toString(): String
+}
+
+Auto"1" -- "1" Sede
+Auto"1" -- "1" Veicolo
+
+
+@enduml
