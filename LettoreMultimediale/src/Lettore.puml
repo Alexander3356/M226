@@ -1,0 +1,49 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+class Player {
+ -marca: string
+ -modello: string
+ -playlist: Playlist
+ +Player(marca : string, modello : string, playlist : Playlist)
+ +play()
+ +successivo()
+ +precedente()
+ +selezionaBrano()
+ +getMarca():string
+ +setMarca(string)
+ +getModello():string
+ +setModello(string)
+ +getPlaylist(): Playlist
+ +setPlaylist(playlist)
+}
+
+class Playlist {
+ -titolo: string
+ -brani: List<Brano>
+ -index: int
+ +Playlist(titolo : string, brani : List<Brano>, index : int)
+ +getTitolo():string
+ +setTitolo(string)
+ +getBrani():List<Brano>
+ +setBrani(List<Brano>)
+ +getIndex():int
+ +setIndex(int)
+}
+
+
+
+class Brano {
+ -titolo: string
+ -autore: string
+ +Brano(titolo : string, autore : string)
+ +getTitolo():string
+ +setTitolo(string)
+ +getAutore():string
+ +setAutore(string)
+}
+
+Player"N" -- "N"Playlist
+Playlist"N" -- "N"Brano
+
+@enduml
