@@ -1,0 +1,3 @@
+Doraemon,60,Robot
+Garfield,5,Casinista
+Stregatto,90,Ghignagatto
