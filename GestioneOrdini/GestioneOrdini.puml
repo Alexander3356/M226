@@ -1,0 +1,88 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class GestioneOrdini {
+  - ordini: ArrayList<Ordine>
+  + aggiungiOrdini(ordine: Ordine): void
+  + visualizzaOrdini(): void
+  - filtraPerCliente(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  - filtraPerProdotto(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  - filtraPerStato(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  - filtraPerPrezzo(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  - filtraPerData(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  + ordiniSelezionati(risposta: String, sc: Scanner, filtrati: ArrayList<Ordine>): void
+  + riordinaOrdini(risposta: String, filtrati: ArrayList<Ordine>, sc: Scanner): void
+  + ordinaPerData(risposta: String, ordini2: ArrayList<Ordine>): void
+  + ordinaPerId(risposta: String, ordini2: ArrayList<Ordine>): void
+  + ordinaPerPrezzo(risposta: String, ordini2: ArrayList<Ordine>): void
+  + scambiaOrdini(j: int, ordini2: ArrayList<Ordine>): void
+  + continua(sc: Scanner): String
+  + scritturaFile(sc: Scanner, ordini2: ArrayList<Ordine>): void
+}
+
+class Ordine {
+  - cliente: Cliente
+  - prodotto: Prodotto
+  - quantita: int
+  - stato: String
+  - prezzoTotale: double
+  - dataSpedizione: String
+  + Ordine(cliente: Cliente, prodotto: Prodotto, quantita: int, stato: String, dataSpedizione: String)
+  + getCliente(): Cliente
+  + setCliente(cliente: Cliente): void
+  + getProdotto(): Prodotto
+  + setProdotto(prodotto: Prodotto): void
+  + getQuantita(): int
+  + setQuantita(quantita: int): void
+  + getStato(): String
+  + setStato(stato: String): void
+  + getPrezzoTotale(): double
+  + setPrezzoTotale(prezzoTotale: double): void
+  + getDataSpedizione(): String
+  + setDataSpedizione(dataSpedizione: String): void
+  + equals(o: Object): boolean
+  + hashCode(): int
+  + toString(): String
+}
+
+class Prodotto {
+  - nome: String
+  - prezzo: double
+  - categoria: String
+  - maggiorenne: boolean
+  + Prodotto(nome: String, prezzo: double, categoria: String, maggiorenne: boolean)
+  + getNome(): String
+  + setNome(nome: String): void
+  + getPrezzo(): double
+  + setPrezzo(prezzo: double): void
+  + getCategoria(): String
+  + setCategoria(categoria: String): void
+  + getMaggiorenne(): boolean
+  + setMaggiorenne(maggiorenne: boolean): void
+  + equals(o: Object): boolean
+  + hashCode(): int
+}
+
+class Cliente {
+  - id : int
+  - nome : String
+  - cognome : String
+  - email : String
+  - dataNascita : String
+  + getId() : int
+  + setId(int) : void
+  + getNome() : String
+  + setNome(String) : void
+  + getCognome() : String
+  + setCognome(String) : void
+  + getEmail() : String
+  + setEmail(String) : void
+  + getDataNascita() : String
+  + setDataNascita(String) : void
+}
+
+GestioneOrdini "1" *-- "*" Ordine
+Ordine "1" --> "1" Cliente
+Ordine "1" --> "1" Prodotto
+
+@endumll

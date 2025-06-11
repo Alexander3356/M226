@@ -7,17 +7,15 @@ public class Ordine {
     private int quantita;
     private String stato;
     private double prezzoTotale;
-    private String dataOrdine;
     private String dataSpedizione;
 
 
-    public Ordine(Cliente cliente, Prodotto prodotto, int quantita, String stato, String dataOrdine, String dataSpedizione) {
+    public Ordine(Cliente cliente, Prodotto prodotto, int quantita, String stato, String dataSpedizione) {
         this.cliente = cliente;
         this.prodotto = prodotto;
         this.quantita = quantita;
         this.stato = stato;
         this.prezzoTotale = prodotto.getPrezzo() * quantita;
-        this.dataOrdine = dataOrdine;
         this.dataSpedizione = dataSpedizione;
     }
 
@@ -61,14 +59,6 @@ public class Ordine {
         this.prezzoTotale = prezzoTotale;
     }
 
-    public String getDataOrdine() {
-        return dataOrdine;
-    }
-
-    public void setDataOrdine(String dataOrdine) {
-        this.dataOrdine = dataOrdine;
-    }
-
     public String getDataSpedizione() {
         return dataSpedizione;
     }
@@ -99,15 +89,13 @@ public class Ordine {
                     ", quantita: " + quantita +
                     ", stato: " + stato +
                     ", prezzo totale: " + prezzoTotale +
-                    ", data ordine: " + dataOrdine +
                     ", data spedizione: " + dataSpedizione;
         } else {
             return "cliente: " + cliente.getId() + " " + cliente.getNome() + " " + cliente.getCognome() +
                     ", prodotto: " + prodotto.getNome() +
                     ", quantita: " + quantita +
                     ", stato: " + stato +
-                    ", prezzo totale: " + prezzoTotale +
-                    ", data ordine: " + dataOrdine;
+                    ", prezzo totale: " + prezzoTotale;
         }
     }
 }

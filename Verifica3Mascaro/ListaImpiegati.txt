@@ -1,0 +1,5 @@
+1250.5;Mario
+200;Link
+1000;Luigi
+1234,Luigi
+8230.25;Sonic

@@ -1,0 +1,2 @@
+if (nome.matches("\\d+(,\\d+)?")) { //Da stackoverflow
+Date date1 = new SimpleDateFormat("dd.MM.yyyy").parse(ordini2.get(j).getDataSpedizione()); //da stackoverflow
